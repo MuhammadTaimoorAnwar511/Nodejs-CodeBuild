@@ -1,13 +1,8 @@
-version: 0.0
-os: linux
-files:
-  - source: /
-    destination: /home/ubuntu/node-app
 hooks:
   BeforeInstall:
     - location: scripts/before_install.sh
       timeout: 300
-      runas: root
+      runas: root   # must run as root to chown files
   ApplicationStop:
     - location: scripts/application_stop.sh
       timeout: 300
