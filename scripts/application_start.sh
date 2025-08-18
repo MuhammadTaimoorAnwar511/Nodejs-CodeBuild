@@ -1,19 +1,17 @@
 #!/bin/bash
-
-# navigate to app directory
 cd /home/ubuntu/node-app
 
-# give permission (optional, can be removed if unnecessary)
-chmod -R 755 .
+# clean old modules (optional)
+rm -rf node_modules package-lock.json
 
 # install dependencies
-npm install
+npm install --legacy-peer-deps
 
-# install pm2 globally (if not installed already)
-npm install -g pm2
+# ensure PM2 is installed for ubuntu user
+if ! command -v pm2 >/dev/null; then
+    npm install -g pm2
+fi
 
-# start the app with pm2
+# start app with PM2
 pm2 start "npm start" --name node-app
-
-# save pm2 process list for auto-start on reboot
 pm2 save
