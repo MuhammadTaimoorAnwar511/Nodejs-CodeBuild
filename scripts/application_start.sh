@@ -2,7 +2,10 @@
 
 cd /home/ubuntu/node-app
 
-# clean old modules (optional)
+# make scripts executable now that they exist
+chmod +x ./scripts/*.sh
+
+# clean old modules
 rm -rf node_modules package-lock.json
 
 # install dependencies
