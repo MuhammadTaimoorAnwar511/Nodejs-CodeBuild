@@ -1,9 +1,10 @@
 #!/bin/bash
-# scripts/before_install.sh
 
 # ensure app folder exists
 mkdir -p /home/ubuntu/node-app
 
-# fix ownership and permissions so ubuntu can run scripts and modify files
-chown -R ubuntu:ubuntu /home/ubuntu/node-app
+# give full permissions (optional, but convenient for root)
 chmod -R 755 /home/ubuntu/node-app
+
+# make sure the other scripts are executable
+chmod +x /home/ubuntu/node-app/scripts/*.sh

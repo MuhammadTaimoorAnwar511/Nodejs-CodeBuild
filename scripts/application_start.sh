@@ -7,7 +7,7 @@ rm -rf node_modules package-lock.json
 # install dependencies
 npm install --legacy-peer-deps
 
-# ensure PM2 is installed for ubuntu user
+# install PM2 globally (as root)
 if ! command -v pm2 >/dev/null; then
     npm install -g pm2
 fi
