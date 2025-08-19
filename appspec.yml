@@ -8,7 +8,7 @@ hooks:
   BeforeInstall:
     - location: scripts/before_install.sh
       timeout: 300
-      runas: ubuntu       # create folder & set permissions as ubuntu
+      runas: ubuntu       # create folder & set permissions as ubuntu  #can be root
   ApplicationStop:
     - location: scripts/application_stop.sh
       timeout: 300
