@@ -1,8 +1,11 @@
 #!/bin/bash
 
+# ensure ubuntu owns all files
+chown -R ubuntu:ubuntu /home/ubuntu/node-app
+
 cd /home/ubuntu/node-app
 
-# make scripts executable now that they exist
+# make scripts executable
 chmod +x ./scripts/*.sh
 
 # clean old modules
