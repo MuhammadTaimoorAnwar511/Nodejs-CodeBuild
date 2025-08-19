@@ -1,4 +1,5 @@
 #!/bin/bash
+
 cd /home/ubuntu/node-app
 
 # clean old modules (optional)

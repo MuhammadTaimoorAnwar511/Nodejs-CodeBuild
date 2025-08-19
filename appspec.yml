@@ -8,12 +8,12 @@ hooks:
   BeforeInstall:
     - location: scripts/before_install.sh
       timeout: 300
-      runas: root
+      runas: ubuntu       # create folder & set permissions as ubuntu
   ApplicationStop:
     - location: scripts/application_stop.sh
       timeout: 300
-      runas: root
+      runas: ubuntu       # stop PM2 as ubuntu
   ApplicationStart:
     - location: scripts/application_start.sh
       timeout: 300
-      runas: root
+      runas: ubuntu       # install deps & start app as ubuntu
